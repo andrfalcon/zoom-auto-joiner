@@ -21,7 +21,7 @@ pyautogui.moveTo(meetingidbtn)
 pyautogui.write(meeting_id)
 
 # Enter passcode
-passcode=pyautogui.locateCenterOnScreen("")
+passcode=pyautogui.locateCenterOnScreen("authentication2.png")
 pyautogui.moveTo(passcode)
 pyautogui.write(password)
 
