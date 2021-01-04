@@ -11,12 +11,12 @@ from datetime import datetime
 os.startfile(" ")
 
 # Click the join meeting button
-joinbtn=pyautogui.locateCenterOnScreen("")
+joinbtn=pyautogui.locateCenterOnScreen("join.png")
 pyautogui.moveTo(joinbtn)
 pyautogui.click()
 
 # Enter meeting ID
-meetingidbtn=pyautogui.locateCenterOnScreen("")
+meetingidbtn=pyautogui.locateCenterOnScreen("id.png")
 pyautogui.moveTo(meetingidbtn)
 pyautogui.write(meeting_id)
 
@@ -26,7 +26,7 @@ pyautogui.moveTo(passcode)
 pyautogui.write(password)
 
 # Read Excel file with meeting IDs, passwords, and times
-df = pd.read_excel('',index=False)
+df = pd.read_excel('timings.xlsx',index=False)
 
 # Loop to constantly check times and compare with Zoom meeting times
 while True:
